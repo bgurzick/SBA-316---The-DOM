@@ -1,0 +1,34 @@
+Initial brainstorm for single-page website content ideas
+    - a "build your own website" website, where the user makes selections and inputs information into a form and it designs the website around them in real time.
+        -for changing styles in real time... what are the different options? to change element class or id? to change stylesheets all together?  or... just a quick render for each ... INSERTRULE and DELETERULE ? setAttribute()...which meets the requirements in the easiest way? why would one method be preferred over another?
+            -I like the idea of having the user select what TYPE of website they're making and re-styling based on their selection. I guess that's a pretty common feature of drag & drop website builders.
+
+DOM properties to use
+
+BOM properties to use
+
+Event-Driven Programming & DOM events
+
+Form Validation techniques
+    (built-in HTML validation, like e-mail type; also DOM-event-driven JavaScript validation)
+
+
+REQUIREMENTS
+    -cache one element using SELECTELEMENTBYID -->(done)
+    -cache one element using QUERYSELECTOR or QUERYSELECTORALL
+    -navigate parent-child-sibling-node (firstChild, parentNode, etc.)
+    -iterate over a collection of elements to accomplish a task
+    -create one element using createElement
+    -use appendChild and/or prepend  to add new elements to the DOM
+    -use Document Fragment interface or HTML templating with cloneNode to create templated content
+    -Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
+    -Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
+    -Modify at least one attribute of an element in response to user interaction.
+    -Register at least two different EVENT LISTENERS and create the associated event handler functions.
+    -Use at least two Browser Object Model (BOM) properties or methods.
+    -Include at least one form and/or input with HTML attribute validation.
+    -Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.)
+    -Ensure that the program runs without errors
+    -Commit frequently to the git repository.
+    -Include a README file
+    -Level of effort displayed in creativity, presentation, and user experience.
