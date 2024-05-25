@@ -19,13 +19,13 @@ REQUIREMENTS
     -navigate parent-child-sibling-node (firstChild, parentNode, etc.)
     -iterate over a collection of elements to accomplish a task
     -create one element using createElement
-    -use appendChild and/or prepend  to add new elements to the DOM
+    -use appendChild and/or prepend  to add new elements to the DOM ---> (done)
     -use Document Fragment interface or HTML templating with cloneNode to create templated content
     -Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent. ----> (done)
     -Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties. ----> (done)
     -Modify at least one attribute of an element in response to user interaction. ---> (done)
     -Register at least two different EVENT LISTENERS and create the associated event handler functions. --->(done)
-    -Use at least two Browser Object Model (BOM) properties or methods.
+    -Use at least two Browser Object Model (BOM) properties or methods. -->(done? i think)
     -Include at least one form and/or input with HTML attribute validation. ---> (done)
     -Include at least one form and/or input with DOM event-based validation. (This can be the same form or input as the one above, but should include event-based validation in addition to the HTML attribute validation.) ---> (done)
     -Ensure that the program runs without errors ----> (done)
