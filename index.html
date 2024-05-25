@@ -4,47 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Page DOM BOM Doozy</title>
-    <link rel="stylesheet" href="./styles.css"/>
-    <script defer src="./script.mjs"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <!-- Container for entire form. -->
-   <div class="form-container">
-    <!-- Registration Side -->
-    <div>
-      <h1>If you build it, it will build ...or something like that.</h1>
-      <p>Please make your build selections below. Now. Do it now.</p>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">About This</a></li>
+                <li><a href="#">About That</a></li>
+                <li><a href="#">About Something Else</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <!-- Registration Form -->
-      <form id="buildRegistration">
-        <input name="websiteName" type="text" placeholder="My Website Name" /> <!--make it so it has to include .com or something, or include a radio button below to add .com .io .org etc.-->
-        <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+    <!-- form container -->
+    <div class="form-container">
+        <div>
+            <h1>It's time to build your very own website</h1>
+            <p>Please make your build selections below. Now! Do it now!</p>
 
-        <input name="email" type="email" placeholder="Email" />
-        <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
-        ><br />
+            <!-- registration form for 'make your own website'-->
+            <!-- borrowed Font Awesome from our in-class exercise -->
+            <form id="buildRegistration">
+                <input name="websiteName" type="text" placeholder="My Awesome Website Name" /> 
+                <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+              <!-- e-mail type for HTML validation -->
+                <input name="email" type="email" placeholder="Email" />
+                <span class="input-icon"><i class="fa-solid fa-envelope"></i></span><br />
 
-        <!-- use this section to make radio buttons to choose between 3 different styles -->
-        <input name="myStyle" type="radio" placeholder="myStyle" />
-        <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
+                <!-- radio buttons for website style type selection -->
+                <label><input name="websiteType" type="radio" value="portfolio"> Portfolio</label><br>
+                <label><input name="websiteType" type="radio" value="blog"> Blog</label><br>
+                <label><input name="websiteType" type="radio" value="ecommerce"> E-commerce</label><br>
 
-        <!-- use this section to do validation by making sure email and backup email are (1) both emails and (2) not the same email  -->
-        <input
-          name="backupEmail"
-          type="email"
-          placeholder="Backup Email"
-        />
-        <span class="input-icon"><i class="fa-solid fa-key"></i></span
-        ><br /><br />
+                <input name="backupEmail" type="email" placeholder="Backup Email" />
+                <span class="input-icon"><i class="fa-solid fa-key"></i></span><br /><br />
 
-        <div class="flex-row">
-          <input name="terms" type="checkbox" />
-          <label for="terms"
-            >I agree to the&nbsp;<a href="#">Terms & Conditions</a>.</label
-          >
-          <input type="submit" value="Register" />
+                <div class="flex-row">
+                    <input name="terms" type="checkbox" />
+                    <!-- borrowed this syntax from our in-class lab -->
+                    <label for="terms">I agree to the&nbsp;<a href="#">Terms & Conditions</a>.</label>
+                    <input type="submit" value="Register" />
+                </div>
+            </form>
         </div>
-      </form>
     </div>
+
+    <div id="websitePreview"></div>
+
+    <script src="script.mjs" ></script>
 </body>
 </html>
