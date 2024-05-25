@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const websiteName = form.elements["websiteName"];
   const websiteType = form.elements["websiteType"];
   const header = document.querySelector('h1');
+  const email = form.elements["email"];
+  const backupEmail = form.elements["backupEmail"];
 
   // live update of the webpage title / header content
   function updateTitle() {
@@ -20,47 +22,47 @@ document.addEventListener('DOMContentLoaded', function() {
       let backgroundColor;
       switch (websiteType.value) {
           case "portfolio":
-            // three shades of yellow
-              backgroundColor = ["#FFFFCC", "#FFFF99", "#FFFF66"]; 
+              // three shades of yellow
+              backgroundColor = ["#FFFFCC", "#FFFF99", "#FFFF66"];
               break;
           case "blog":
-            // three shades of grey
-              backgroundColor = ["#CCCCCC", "#999999", "#666666"]; 
+              // three shades of grey
+              backgroundColor = ["#CCCCCC", "#999999", "#666666"];
               break;
           case "ecommerce":
-            // three shades of white
-              backgroundColor = ["#FFFFFF", "#F2F2F2", "#E5E5E5"]; 
+              // three shades of white
+              backgroundColor = ["#FFFFFF", "#F2F2F2", "#E5E5E5"];
               break;
           default:
-            // default blue/green color scheme
-              backgroundColor = "#f125c5"; 
+              // default blue/green color scheme
+              backgroundColor = "#f125c5";
               break;
       }
       document.body.style.background = `linear-gradient(to right, ${backgroundColor.join(',')})`;
   }
 
-// adding a useless button to meet the requirement of "appendChild" - with more time, could make it a useful button
-function addNewElement() {
-  const uselessButton = document.createElement('button');
-  uselessButton.textContent = 'Wow, a new button!';
-  uselessButton.addEventListener('click', function() {
-      alert("Consider this button 'clicked', bro!");
-  });
-  document.querySelector('.form-container').appendChild(uselessButton);
-}
+  // adding a useless button to meet the requirement of "appendChild" - with more time, could make it a useful button
+  function addNewElement() {
+      const uselessButton = document.createElement('button');
+      uselessButton.textContent = 'Wow, a new button!';
+      uselessButton.addEventListener('click', function() {
+          alert("Consider this button 'clicked', bro!");
+      });
+      document.querySelector('.form-container').appendChild(uselessButton);
+  }
 
-  // making sure the backup email is different from the first email
+  // verifying that backup email is different than primary email; supposed to display an error message, if it works
   function validateBackupEmail() {
-    const backupEmailInput = backupEmail;
-    const backupEmailValue = backupEmailInput.value.trim(); 
-    const primaryEmailValue = email.value.trim(); 
+      const backupEmailInput = backupEmail;
+      const backupEmailValue = backupEmailInput.value.trim(); 
+      const primaryEmailValue = email.value.trim();
 
-    if (backupEmailValue === primaryEmailValue) {
-        alert("Dude, your backup email needs to be different. You can't use the same email!");
-        return false; 
-    }
-    return true;
-}
+      if (backupEmailValue === primaryEmailValue) {
+          alert("Backup email should be different from the primary email.");
+          return false; 
+      }
+      return true;
+  }
 
   // making the title and header change upon user input
   websiteName.addEventListener('keyup', updateTitle);
@@ -68,6 +70,13 @@ function addNewElement() {
   // making the background color change
   websiteType.forEach(function(input) {
       input.addEventListener('change', updateBackgroundColor);
+  });
+
+  // event listener for backup email validation
+  form.addEventListener('submit', function(event) {
+      if (!validateBackupEmail()) {
+          event.preventDefault();
+      }
   });
 
   // new element call
