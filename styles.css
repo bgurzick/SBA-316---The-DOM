@@ -151,7 +151,7 @@ nav ul li a {
 
 .form-container input:focus + .input-icon {
     color: #ffffff;
-    outline: 2px solid #2af52a;
+    outline: 5px solid #2af52a;
     margin: 5px 0px;
 }
 
