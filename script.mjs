@@ -49,6 +49,19 @@ function addNewElement() {
   document.querySelector('.form-container').appendChild(uselessButton);
 }
 
+  // making sure the backup email is different from the first email
+  function validateBackupEmail() {
+    const backupEmailInput = backupEmail;
+    const backupEmailValue = backupEmailInput.value.trim(); 
+    const primaryEmailValue = email.value.trim(); 
+
+    if (backupEmailValue === primaryEmailValue) {
+        alert("Dude, your backup email needs to be different. You can't use the same email!");
+        return false; 
+    }
+    return true;
+}
+
   // making the title and header change upon user input
   websiteName.addEventListener('keyup', updateTitle);
 
