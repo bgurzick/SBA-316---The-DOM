@@ -32,3 +32,6 @@ REQUIREMENTS
     -Commit frequently to the git repository. ---> (done)
     -Include a README file --->(done)
     -Level of effort displayed in creativity, presentation, and user experience. --->(done)
+
+
+    I unfortunatley didn't get to the Document Frag / cloneNode requirement.
