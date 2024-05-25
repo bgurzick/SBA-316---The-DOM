@@ -13,6 +13,9 @@ As usual, I wish I had more time. I added a button to meet the 'append' requirem
 
 With more time, I would simply make it more robust and maybe more visually appealing (greater consideration to the color schemes). Instead, I just wanted to be sure that the background color changes were obvious.
 
+Oh! I also want more time to (perhaps obviously) make the registration form disappear once it has been successfully completed.
+
+
 
 
 
