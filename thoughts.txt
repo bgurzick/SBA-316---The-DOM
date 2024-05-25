@@ -17,8 +17,8 @@ REQUIREMENTS
     -cache one element using SELECTELEMENTBYID -->(done)
     -cache one element using QUERYSELECTOR or QUERYSELECTORALL ---> (done)
     -navigate parent-child-sibling-node (firstChild, parentNode, etc.)
-    -iterate over a collection of elements to accomplish a task
-    -create one element using createElement
+    -iterate over a collection of elements to accomplish a task ----> done
+    -create one element using createElement ---> done
     -use appendChild and/or prepend  to add new elements to the DOM ---> (done)
     -use Document Fragment interface or HTML templating with cloneNode to create templated content
     -Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent. ----> (done)
